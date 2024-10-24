@@ -8,12 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-47.5%)" }, // Move left by 50% (half the container's width)
+        },
+      },
+      animation: {
+        marquee: "marquee 15s linear infinite", // Default for larger screens
       },
     },
   },
   plugins: [],
 };
+
 export default config;
