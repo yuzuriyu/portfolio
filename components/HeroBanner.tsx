@@ -51,11 +51,11 @@ const HeroBanner = () => {
         <div className="flex w-[200%] animate-marquee">
           {/* First instance of text */}
           <p className="text-white text-[230px]  whitespace-nowrap mr-8">
-            Carey Cole —
+            Carey Cole Garcia —
           </p>
           {/* Duplicate instance for seamless scrolling */}
           <p className="text-white text-[230px]  whitespace-nowrap mr-8">
-            Carey Cole —
+            Carey Cole Garcia —
           </p>
         </div>
       </div>

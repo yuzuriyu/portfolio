@@ -11,7 +11,7 @@ const config: Config = {
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-46.5%)" }, // Moves left by 46% of the container width
+          "100%": { transform: "translateX(-70%)" }, // Moves left by 70% of the container width
         },
       },
       animation: {
@@ -21,6 +21,12 @@ const config: Config = {
         poppins: ["Poppins", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
         dennis: ["Dennis Sans", "sans-serif"], // Add Dennis Sans
+      },
+      colors: {
+        gray: {
+          ...require("tailwindcss/colors").gray, // Include default gray colors
+          custom: "#1C1D20", // Add custom gray color
+        },
       },
     },
   },
