@@ -1,15 +1,17 @@
 import React from "react";
-import Image from "next/image";
 import { projectData } from "@/projectdata";
+import Image from "next/image";
 
-const ProjectGrid = () => {
+const PreviewGrid = () => {
+  const filteredData = projectData.slice(0, 4);
+
   return (
-    <div className="w-11/12 m-auto md:w-10/12 grid grid-cols-1 md:grid-cols-2 gap-16 pb-40">
-      {projectData.map((project) => (
+    <div className="w-11/12 m-auto md:w-full grid grid-cols-1 md:grid-cols-2 gap-16 pb-40">
+      {filteredData.map((project) => (
         <div key={project.id} className="w-full">
           <div
             style={{ backgroundColor: project.bgColor }}
-            className="h-[360px] md:h-[600px] flex justify-center items-center mb-4 md:mb-0"
+            className="h-[360px] md:h-[600px] flex justify-center items-center md:mb-0 mb-4"
           >
             <div className="w-full h-[170px] md:h-[300px] flex items-center justify-center">
               <Image
@@ -40,4 +42,4 @@ const ProjectGrid = () => {
   );
 };
 
-export default ProjectGrid;
+export default PreviewGrid;

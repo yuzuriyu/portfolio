@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import Introductory from "@/components/Introductory";
-import ProjectsPreview from "@/components/ProjectsPreview";
+import PreviewProjects from "@/components/PreviewProjects";
 import Footer from "@/components/Footer";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <Header />
       <HeroBanner />
       <Introductory />
-      <ProjectsPreview />
+      <PreviewProjects />
       <Footer />
     </div>
   );

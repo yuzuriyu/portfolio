@@ -10,7 +10,8 @@ const HeaderDark = () => {
     throw Error("context undefined");
   }
 
-  const { isMobileNavOpen, toggleMobileNav, activePage } = context;
+  const { isMobileNavOpen, toggleMobileNav, activePage, setActivePage } =
+    context;
   return (
     <>
       {isMobileNavOpen && <MobileNav />}
@@ -21,8 +22,8 @@ const HeaderDark = () => {
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             fill=""
             className="block md:hidden"
@@ -32,7 +33,10 @@ const HeaderDark = () => {
           </svg>
           <div className="md:flex items-center hidden">
             <Link href={"/work"}>
-              <div className="mr-12 text-lg relative group cursor-pointer">
+              <div
+                className="mr-12 text-lg relative group cursor-pointer"
+                onClick={() => setActivePage("work")}
+              >
                 Work
                 <div
                   className={`${
@@ -42,7 +46,10 @@ const HeaderDark = () => {
               </div>
             </Link>
             <Link href={"/about"}>
-              <div className="mr-12 text-lg relative group cursor-pointer">
+              <div
+                className="mr-12 text-lg relative group cursor-pointer"
+                onClick={() => setActivePage("about")}
+              >
                 About
                 <div
                   className={`${
@@ -52,7 +59,10 @@ const HeaderDark = () => {
               </div>
             </Link>
             <Link href={"/contact"}>
-              <div className="text-lg relative group cursor-pointer">
+              <div
+                className="text-lg relative group cursor-pointer"
+                onClick={() => setActivePage("contact")}
+              >
                 Contact
                 <div
                   className={`${

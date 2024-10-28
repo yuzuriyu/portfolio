@@ -1,36 +1,27 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import ProjectGrid from "./ProjectGrid";
-import ProjectList from "./ProjectList";
+import Link from "next/link";
+import { projectData } from "@/projectdata";
+import { useContext, useState } from "react";
+import PreviewList from "./PreviewList";
+import PreviewGrid from "./PreviewGrid";
+import { PageContext } from "@/context/PageContext";
 
-const Projects = () => {
+const PreviewProjects = () => {
+  const context = useContext(PageContext);
+
+  if (!context) {
+    throw Error("context undefined");
+  }
+
+  const { setActivePage } = context;
+  const filteredData = projectData.slice(0, 4);
   const [activeViewMode, setActiveViewMode] = useState<string>("list");
 
-  useEffect(() => {
-    // Check the screen width on initial render
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setActiveViewMode("grid"); // Set to grid view for small screens
-      } else {
-        setActiveViewMode("list"); // Set to list view for medium screens and up
-      }
-    };
-
-    handleResize(); // Call it once on mount
-    window.addEventListener("resize", handleResize); // Listen for window resize
-
-    return () => {
-      window.removeEventListener("resize", handleResize); // Cleanup listener on unmount
-    };
-  }, []);
-
   return (
-    <>
-      <div className="w-11/12 m-auto pb-20 pt-44 md:pt-64 md:w-8/12">
-        <p className="md:text-7xl md:pb-24 text-5xl">
-          Building refined <br /> digital experiences
-        </p>
+    <div className="w-11/12 m-auto md:w-10/12 pb-20">
+      <div className="w-[82%] m-auto mb-12 flex justify-between items-center">
+        <p className="text-xs  text-gray-400 hidden md:block">RECENT WORK</p>
         <div className="md:flex items-center justify-end hidden">
           <div
             className={`w-20 h-20 border flex justify-center items-center rounded-full mr-2 cursor-pointer ${
@@ -72,10 +63,19 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      {activeViewMode === "grid" && <ProjectGrid />}
-      {activeViewMode === "list" && <ProjectList />}
-    </>
+
+      {activeViewMode === "list" && <PreviewList />}
+      {activeViewMode === "grid" && <PreviewGrid />}
+
+      <Link
+        href={"/work"}
+        className="flex w-[160px] border-2 rounded-full m-auto p-8 items-center justify-center"
+        onClick={() => setActivePage("work")}
+      >
+        <p className="">See More</p>
+      </Link>
+    </div>
   );
 };
 
-export default Projects;
+export default PreviewProjects;
