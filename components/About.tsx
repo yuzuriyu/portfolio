@@ -4,18 +4,18 @@ import Image from "next/image";
 const About = () => {
   return (
     <div>
-      <div className="w-11/12 m-auto pb-20 pt-44 md:pt-64 md:w-8/12">
-        <p className="md:text-7xl md:pb-24 text-5xl">
+      <div className="m-auto w-11/12 pb-20 pt-44 md:w-8/12 md:pt-64">
+        <p className="text-5xl md:pb-24 md:text-7xl">
           Coding to <br /> bring my aspirations to life
         </p>
       </div>
-      <div className="flex flex-col py-20 md:flex-row md:gap-20 gap-2 w-11/12 m-auto md:w-8/12">
-        <div className="md:w-1/3 ">
+      <div className="m-auto flex w-11/12 flex-col gap-2 py-20 md:w-8/12 md:flex-row md:gap-20">
+        <div className="md:w-1/3">
           <p className="text-lg">
             I assist businesses globally by providing customized solutions,
             consistently prioritizing quality above all.
           </p>
-          <p className="pt-8 pb-4 text-gray-400">
+          <p className="pb-4 pt-8 text-gray-400">
             Always looking for a chance to be better.
           </p>
         </div>
@@ -26,16 +26,16 @@ const About = () => {
             width={0}
             height={0}
             sizes="100vw"
-            className="w-full h-full object-cover max-h-[900px]"
+            className="h-full max-h-[900px] w-full object-cover"
           />
         </div>
       </div>
-      <div className="w-11/12 m-auto md:w-10/12 pb-32">
-        <p className="md:text-7xl text-4xl pb-8 ">I can help you with</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="m-auto w-11/12 pb-32 md:w-10/12">
+        <p className="pb-8 text-4xl md:text-7xl">I can help you with</p>
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           <div>
-            <p className="text-xs text-gray-400 pb-8  hidden md:block">01</p>
-            <p className=" md:text-3xl text-xl py-1 border-t border-gray-400 pt-12 md:pb-12 pb-8">
+            <p className="hidden pb-8 text-xs text-gray-400 md:block">01</p>
+            <p className="border-t border-gray-400 py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
               Development
             </p>
             <p className="md:text-lg">
@@ -45,8 +45,8 @@ const About = () => {
             </p>
           </div>
           <div>
-            <p className="text-xs text-gray-400 pb-8  hidden md:block">02</p>
-            <p className=" md:text-3xl text-xl py-1 border-t border-gray-400 pt-12 md:pb-12 pb-8">
+            <p className="hidden pb-8 text-xs text-gray-400 md:block">02</p>
+            <p className="border-t border-gray-400 py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
               Custom Solutions
             </p>
             <p className="md:text-lg">
@@ -56,8 +56,8 @@ const About = () => {
             </p>
           </div>
           <div>
-            <p className="text-xs text-gray-400 pb-8  hidden md:block">03</p>
-            <p className=" md:text-3xl text-xl py-1 border-t border-gray-400 pt-12 md:pb-12 pb-8">
+            <p className="hidden pb-8 text-xs text-gray-400 md:block">03</p>
+            <p className="border-t border-gray-400 py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
               Seamless Integration
             </p>
             <p className="md:text-lg">
@@ -68,7 +68,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="w-11/12 m-auto md:w-8/12 flex flex-col md:flex-row pb-20 md:gap-20 gap-2">
+      <div className="m-auto flex w-11/12 flex-col gap-2 pb-40 md:w-8/12 md:flex-row md:gap-20">
         <div className="md:w-1/2">
           <Image
             src={"/images/portrait-2.jpg"}
@@ -76,11 +76,11 @@ const About = () => {
             width={0}
             sizes="100vw"
             height={0}
-            className="w-full h-full "
+            className="h-full w-full object-cover"
           />
         </div>
         <div className="md:w-1/2">
-          <p className=" md:text-3xl text-xl py-1  pt-12 md:pb-12 pb-8">
+          <p className="py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
             Outside of coding
           </p>
           <p className="md:text-lg">

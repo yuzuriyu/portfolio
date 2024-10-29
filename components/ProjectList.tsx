@@ -5,44 +5,47 @@ import { projectData } from "@/projectdata";
 const ProjectList = () => {
   return (
     <div className="pb-40">
-      <div className="justify-between pt-4 pb-12 items-center w-full md:w-8/12 m-auto md:grid grid-cols-5">
-        <div className="text-gray-400 text-xs col-start-1 col-end-3">
+      <div className="m-auto w-full grid-cols-5 items-center justify-between pb-12 pt-4 md:grid md:w-8/12">
+        <div className="col-start-1 col-end-3 text-xs text-gray-400">
           PROJECT NAME
         </div>
-        <div className="text-gray-400 text-xs col-start-3 col-end-4 ">
+        <div className="col-start-3 col-end-4 text-xs text-gray-400">
           TECHNOLOGIES
         </div>
-        <div className=" text-gray-400 text-xs col-start-4 col-end-5 ">
+        <div className="col-start-4 col-end-5 text-xs text-gray-400">
           CLASSIFICATION
         </div>
-        <div className=" text-gray-400 text-xs col-start-5 col-end-6 text-right">
+        <div className="col-start-5 col-end-6 text-right text-xs text-gray-400">
           YEAR
         </div>
       </div>
       {projectData.map((data) => (
         <div
-          className="w-11/12 md:w-10/12 m-auto md:border-t-2 py-8"
+          className="m-auto w-11/12 py-8 md:w-10/12 md:border-t-2"
           key={data.id}
         >
-          <div className="h-[360px] flex bg-slate-200 justify-center items-center md:hidden  mb-4">
-            <div className="w-full h-[170px] flex items-center justify-center md:hidden">
+          <div
+            style={{ backgroundColor: data.bgColor }}
+            className="mb-4 flex h-[360px] items-center justify-center md:hidden"
+          >
+            <div className="flex h-[170px] w-full items-center justify-center md:hidden">
               <Image
                 src={data.image}
                 alt=""
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-10/12 object-cover h-full block md:hidden"
+                className="block h-full w-10/12 object-cover md:hidden"
               />
             </div>
           </div>
 
-          <div className="cursor-pointer group justify-between items-center pt-4  md:w-[82%] w-full m-auto md:grid grid-cols-5 hidden">
-            <div className="group-hover:text-gray-400  text-3xl border-b-2 md:border-b-0 w-full pb-2 col-start-1 col-end-3">
+          <div className="group m-auto hidden w-full cursor-pointer grid-cols-5 items-center justify-between pt-4 md:grid md:w-[82%]">
+            <div className="col-start-1 col-end-3 w-full border-b-2 pb-2 text-3xl group-hover:text-gray-400 md:border-b-0">
               {data.name}
             </div>
-            <div className="group-hover:text-gray-400   col-start-3 col-end-4  ">
-              <div className="flex items-center gap-2 w-full">
+            <div className="col-start-3 col-end-4 group-hover:text-gray-400">
+              <div className="flex w-full items-center gap-2">
                 {data.technologies.map((technology) => (
                   <Image
                     key={technology}
@@ -54,10 +57,10 @@ const ProjectList = () => {
                 ))}
               </div>
             </div>
-            <div className="group-hover:text-gray-400 col-start-4 col-end-5 ">
+            <div className="col-start-4 col-end-5 group-hover:text-gray-400">
               {data.classification}
             </div>
-            <div className="col-start-5 col-end-6 text-right group-hover:text-gray-400 ">
+            <div className="col-start-5 col-end-6 text-right group-hover:text-gray-400">
               {data.year}
             </div>
           </div>

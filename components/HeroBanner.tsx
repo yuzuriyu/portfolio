@@ -10,13 +10,13 @@ const HeroBanner = () => {
         width={0}
         height={0}
         sizes="100vw"
-        className="w-full h-[130vh] md:h-screen object-cover"
+        className="h-[130vh] w-full object-cover md:h-screen"
       />
-      <div className="hidden md:flex pl-12 bg-black absolute top-1/2 -translate-y-1/2 left-0 rounded-tr-full rounded-br-full items-center py-4 pr-4">
-        <p className="text-white mr-16 tracking-wider">
+      <div className="absolute left-0 top-1/2 hidden -translate-y-1/2 items-center rounded-br-full rounded-tr-full bg-black py-4 pl-12 pr-4 md:flex">
+        <p className="mr-16 tracking-wider text-white">
           Located <br /> in the <br /> Philippines
         </p>
-        <div className="bg-gray-500 p-4 rounded-full">
+        <div className="rounded-full bg-gray-500 p-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"
@@ -33,12 +33,12 @@ const HeroBanner = () => {
         alt=""
         width={45}
         height={45}
-        className="absolute bottom-[24%] left-4 md:left-auto md:top-[30%] md:bottom-0 md:right-[22%] z-10"
+        className="absolute bottom-[24%] left-4 z-10 md:bottom-0 md:left-auto md:right-[22%] md:top-[30%]"
       />
 
-      <div className=" w-11/12 absolute md:top-1/2 flex md:justify-end justify-start items-center left-1/2 -translate-x-1/2 text-left transform md:-translate-y-1/2 z-10 bottom-24">
-        <div className="md:text-4xl text-2xl block text-white tracking-tight">
-          <div className="md:text-4xl text-2xl block text-white mb-3 tracking-tight ">
+      <div className="absolute bottom-24 left-1/2 z-10 flex w-11/12 -translate-x-1/2 transform items-center justify-start text-left md:top-1/2 md:-translate-y-1/2 md:justify-end">
+        <div className="text-2xl tracking-tight text-white md:text-4xl">
+          <div className="mb-3 text-2xl tracking-tight text-white md:text-4xl">
             Freelance
           </div>
           Full Stack Developer
@@ -46,15 +46,15 @@ const HeroBanner = () => {
       </div>
 
       {/* Scrolling text container */}
-      <div className="absolute z-10 md:top-[430px] top-[320px] overflow-hidden w-full">
+      <div className="absolute top-[320px] z-10 w-full overflow-hidden md:top-[430px]">
         {/* Flexbox for scrolling text */}
         <div className="flex w-[200%] animate-marquee">
           {/* First instance of text */}
-          <p className="text-white text-[230px]  whitespace-nowrap mr-8">
+          <p className="mr-8 whitespace-nowrap text-[230px] text-white">
             Carey Cole Garcia —
           </p>
           {/* Duplicate instance for seamless scrolling */}
-          <p className="text-white text-[230px]  whitespace-nowrap mr-8">
+          <p className="mr-8 whitespace-nowrap text-[230px] text-white">
             Carey Cole Garcia —
           </p>
         </div>

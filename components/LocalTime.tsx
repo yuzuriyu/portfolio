@@ -17,7 +17,7 @@ const LocalTime: React.FC = () => {
       if (timeRef.current) {
         timeRef.current.textContent = `${new Intl.DateTimeFormat(
           "en-US",
-          options
+          options,
         ).format(date)} UTC+8`;
       }
     };
@@ -29,7 +29,7 @@ const LocalTime: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <p ref={timeRef} className="text-white font-bold"></p>;
+  return <p ref={timeRef} className="font-bold text-white"></p>;
 };
 
 export default LocalTime;

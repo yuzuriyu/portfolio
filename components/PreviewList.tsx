@@ -7,25 +7,28 @@ const PreviewList = () => {
   return (
     <>
       {filteredData.map((project) => (
-        <div key={project.id} className="w-full md:border-t-2 py-12">
-          <div className="h-[360px] flex bg-slate-200 justify-center items-center md:hidden mb-4">
-            <div className="w-full h-[170px] flex items-center justify-center md:hidden">
+        <div key={project.id} className="w-full py-12 md:border-t-2">
+          <div
+            style={{ backgroundColor: project.bgColor }}
+            className="mb-4 flex h-[360px] items-center justify-center bg-slate-200 md:hidden"
+          >
+            <div className="flex h-[170px] w-full items-center justify-center md:hidden">
               <Image
                 src={project.image}
                 alt={project.name}
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-10/12 object-cover h-full block md:hidden"
+                className="block h-full w-10/12 object-cover md:hidden"
               />
             </div>
           </div>
 
-          <div className="cursor-pointer group flex flex-col md:flex-row justify-between items-center pt-4 md:w-[82%] w-full m-auto">
-            <p className="group-hover:text-gray-400 md:text-5xl text-3xl border-b-2 md:border-b-0 w-full pb-2">
+          <div className="group m-auto flex w-full cursor-pointer flex-col items-center justify-between pt-4 md:w-[82%] md:flex-row">
+            <p className="w-full border-b-2 pb-2 text-3xl group-hover:text-gray-400 md:border-b-0 md:text-5xl">
               {project.name}
             </p>
-            <div className="flex justify-between md:justify-end pt-4 items-center w-full">
+            <div className="flex w-full items-center justify-between pt-4 md:justify-end">
               <p className="group-hover:text-gray-400">
                 {project.classification}
               </p>

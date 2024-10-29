@@ -4,30 +4,30 @@ import { projectData } from "@/projectdata";
 
 const ProjectGrid = () => {
   return (
-    <div className="w-11/12 m-auto md:w-10/12 grid grid-cols-1 md:grid-cols-2 gap-16 pb-40">
+    <div className="m-auto grid w-11/12 grid-cols-1 gap-16 pb-40 md:w-10/12 md:grid-cols-2">
       {projectData.map((project) => (
         <div key={project.id} className="w-full">
           <div
             style={{ backgroundColor: project.bgColor }}
-            className="h-[360px] md:h-[600px] flex justify-center items-center mb-4 md:mb-0"
+            className="mb-4 flex h-[360px] items-center justify-center md:mb-0 md:h-[600px]"
           >
-            <div className="w-full h-[170px] md:h-[300px] flex items-center justify-center">
+            <div className="flex h-[170px] w-full items-center justify-center md:h-[300px]">
               <Image
                 src={project.image}
                 alt={project.name}
                 width={0}
                 height={0}
                 sizes="100vw"
-                className="w-10/12 object-cover h-full"
+                className="h-full w-10/12 object-cover"
               />
             </div>
           </div>
 
-          <div className="cursor-pointer group flex flex-col md:flex-row justify-between items-center pt-4 md:w-[82%] w-full m-auto md:hidden">
-            <p className="group-hover:text-gray-400 md:text-5xl text-3xl border-b-2 md:border-b-0 w-full pb-2">
+          <div className="group m-auto flex w-full cursor-pointer flex-col items-center justify-between pt-4 md:hidden md:w-[82%] md:flex-row">
+            <p className="w-full border-b-2 pb-2 text-3xl group-hover:text-gray-400 md:border-b-0 md:text-5xl">
               {project.name}
             </p>
-            <div className="flex justify-between md:justify-end pt-4 items-center w-full">
+            <div className="flex w-full items-center justify-between pt-4 md:justify-end">
               <p className="group-hover:text-gray-400">
                 {project.classification}
               </p>

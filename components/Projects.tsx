@@ -27,16 +27,16 @@ const Projects = () => {
 
   return (
     <>
-      <div className="w-11/12 m-auto pb-20 pt-44 md:pt-64 md:w-8/12">
-        <p className="md:text-7xl md:pb-24 text-5xl">
+      <div className="m-auto w-11/12 pb-20 pt-44 md:w-8/12 md:pt-64">
+        <p className="text-5xl md:pb-24 md:text-7xl">
           Building refined <br /> digital experiences
         </p>
-        <div className="md:flex items-center justify-end hidden">
+        <div className="hidden items-center justify-end md:flex">
           <div
-            className={`w-20 h-20 border flex justify-center items-center rounded-full mr-2 cursor-pointer ${
+            className={`mr-2 flex h-20 w-20 cursor-pointer items-center justify-center rounded-full border ${
               activeViewMode === "list"
                 ? "border bg-gray-custom"
-                : "bg-white border-gray-400"
+                : "border-gray-400 bg-white"
             }`}
             onClick={() => setActiveViewMode("list")}
           >
@@ -56,7 +56,7 @@ const Projects = () => {
           <div
             className={`${
               activeViewMode === "grid" ? "border bg-gray-custom" : "bg-white"
-            } w-20 h-20 border border-gray-400 flex justify-center items-center rounded-full cursor-pointer`}
+            } flex h-20 w-20 cursor-pointer items-center justify-center rounded-full border border-gray-400`}
             onClick={() => setActiveViewMode("grid")}
           >
             <svg

@@ -19,15 +19,15 @@ const PreviewProjects = () => {
   const [activeViewMode, setActiveViewMode] = useState<string>("list");
 
   return (
-    <div className="w-11/12 m-auto md:w-10/12 pb-20">
-      <div className="w-[82%] m-auto mb-12 flex justify-between items-center">
-        <p className="text-xs  text-gray-400 hidden md:block">RECENT WORK</p>
-        <div className="md:flex items-center justify-end hidden">
+    <div className="m-auto w-11/12 pb-20 md:w-10/12">
+      <div className="m-auto mb-12 flex w-[82%] items-center justify-between">
+        <p className="hidden text-xs text-gray-400 md:block">RECENT WORK</p>
+        <div className="hidden items-center justify-end md:flex">
           <div
-            className={`w-20 h-20 border flex justify-center items-center rounded-full mr-2 cursor-pointer ${
+            className={`mr-2 flex h-20 w-20 cursor-pointer items-center justify-center rounded-full border ${
               activeViewMode === "list"
                 ? "border bg-gray-custom"
-                : "bg-white border-gray-400"
+                : "border-gray-400 bg-white"
             }`}
             onClick={() => setActiveViewMode("list")}
           >
@@ -47,7 +47,7 @@ const PreviewProjects = () => {
           <div
             className={`${
               activeViewMode === "grid" ? "border bg-gray-custom" : "bg-white"
-            } w-20 h-20 border border-gray-400 flex justify-center items-center rounded-full cursor-pointer`}
+            } flex h-20 w-20 cursor-pointer items-center justify-center rounded-full border border-gray-400`}
             onClick={() => setActiveViewMode("grid")}
           >
             <svg
@@ -69,7 +69,7 @@ const PreviewProjects = () => {
 
       <Link
         href={"/work"}
-        className="flex w-[160px] border-2 rounded-full m-auto p-8 items-center justify-center"
+        className="m-auto flex w-[160px] items-center justify-center rounded-full border-2 p-8"
         onClick={() => setActivePage("work")}
       >
         <p className="">See More</p>
