@@ -23,15 +23,15 @@ const ProjectGrid = () => {
             </div>
           </div>
 
-          <div className="group m-auto flex w-full cursor-pointer flex-col items-center justify-between pt-4 md:hidden md:w-[82%] md:flex-row">
-            <p className="w-full border-b-2 pb-2 text-3xl group-hover:text-gray-400 md:border-b-0 md:text-5xl">
+          <div className="group m-auto flex w-full cursor-pointer flex-col items-center justify-between pt-4 md:pt-12">
+            <p className="w-full border-b pb-4 text-3xl group-hover:text-gray-400 md:pb-6 md:text-3xl">
               {project.name}
             </p>
-            <div className="flex w-full items-center justify-between pt-4 md:justify-end">
-              <p className="group-hover:text-gray-400">
+            <div className="flex w-full items-center justify-between pt-4 md:pt-6">
+              <p className="group-hover:text-gray-400 md:text-lg">
                 {project.classification}
               </p>
-              <p className="md:hidden">{project.year}</p>
+              <p className="md:text-lg">{project.year}</p>
             </div>
           </div>
         </div>

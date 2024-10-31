@@ -5,8 +5,8 @@ const About = () => {
   return (
     <div>
       <div className="m-auto w-11/12 pb-20 pt-44 md:w-8/12 md:pt-64">
-        <p className="text-5xl md:pb-24 md:text-7xl">
-          Coding to <br /> bring my aspirations to life
+        <p className="text-5xl md:pb-24 md:text-8xl">
+          Coding to bring <br /> my aspirations to life
         </p>
       </div>
       <div className="m-auto flex w-11/12 flex-col gap-2 py-20 md:w-8/12 md:flex-row md:gap-20">
@@ -35,7 +35,7 @@ const About = () => {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           <div>
             <p className="hidden pb-8 text-xs text-gray-400 md:block">01</p>
-            <p className="border-t border-gray-400 py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
+            <p className="border-t py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
               Development
             </p>
             <p className="md:text-lg">
@@ -46,7 +46,7 @@ const About = () => {
           </div>
           <div>
             <p className="hidden pb-8 text-xs text-gray-400 md:block">02</p>
-            <p className="border-t border-gray-400 py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
+            <p className="border-t py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
               Custom Solutions
             </p>
             <p className="md:text-lg">
@@ -57,7 +57,7 @@ const About = () => {
           </div>
           <div>
             <p className="hidden pb-8 text-xs text-gray-400 md:block">03</p>
-            <p className="border-t border-gray-400 py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
+            <p className="border-t py-1 pb-8 pt-12 text-xl md:pb-12 md:text-3xl">
               Seamless Integration
             </p>
             <p className="md:text-lg">

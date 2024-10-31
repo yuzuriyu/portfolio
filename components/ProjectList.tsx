@@ -21,7 +21,7 @@ const ProjectList = () => {
       </div>
       {projectData.map((data) => (
         <div
-          className="m-auto w-11/12 py-8 md:w-10/12 md:border-t-2"
+          className="m-auto w-11/12 py-8 md:w-10/12 md:border-t"
           key={data.id}
         >
           <div
@@ -41,7 +41,7 @@ const ProjectList = () => {
           </div>
 
           <div className="group m-auto hidden w-full cursor-pointer grid-cols-5 items-center justify-between pt-4 md:grid md:w-[82%]">
-            <div className="col-start-1 col-end-3 w-full border-b-2 pb-2 text-3xl group-hover:text-gray-400 md:border-b-0">
+            <div className="col-start-1 col-end-3 w-full border-b pb-2 text-3xl group-hover:text-gray-400 md:border-b-0">
               {data.name}
             </div>
             <div className="col-start-3 col-end-4 group-hover:text-gray-400">
@@ -57,10 +57,10 @@ const ProjectList = () => {
                 ))}
               </div>
             </div>
-            <div className="col-start-4 col-end-5 group-hover:text-gray-400">
+            <div className="col-start-4 col-end-5 text-lg group-hover:text-gray-400">
               {data.classification}
             </div>
-            <div className="col-start-5 col-end-6 text-right group-hover:text-gray-400">
+            <div className="col-start-5 col-end-6 text-right text-lg group-hover:text-gray-400">
               {data.year}
             </div>
           </div>

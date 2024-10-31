@@ -27,6 +27,7 @@ const config: Config = {
           ...require("tailwindcss/colors").gray, // Include default gray colors
           custom: "#1C1D20", // Add custom gray color
         },
+        darkgray: "#545557", // Add custom matte black color
       },
     },
   },

@@ -28,7 +28,7 @@ const Projects = () => {
   return (
     <>
       <div className="m-auto w-11/12 pb-20 pt-44 md:w-8/12 md:pt-64">
-        <p className="text-5xl md:pb-24 md:text-7xl">
+        <p className="text-5xl md:pb-24 md:text-8xl">
           Building refined <br /> digital experiences
         </p>
         <div className="hidden items-center justify-end md:flex">

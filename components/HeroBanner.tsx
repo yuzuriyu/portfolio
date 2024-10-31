@@ -16,7 +16,7 @@ const HeroBanner = () => {
         <p className="mr-16 tracking-wider text-white">
           Located <br /> in the <br /> Philippines
         </p>
-        <div className="rounded-full bg-gray-500 p-4">
+        <div className="rounded-full bg-[#c0c1c6] p-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="50"

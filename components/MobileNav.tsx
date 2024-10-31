@@ -17,12 +17,12 @@ const MobileNav = () => {
     <div className="fixed top-0 z-20 h-screen w-full bg-gray-custom py-4">
       <div className="m-auto w-11/12">
         <div
-          className="ml-auto flex h-16 w-16 items-center justify-center rounded-full bg-gray-500"
+          className="bg-darkgray ml-auto flex h-16 w-16 items-center justify-center rounded-full"
           onClick={toggleMobileNav}
         >
           <Image src={"/icons/close.svg"} alt="" width={35} height={35} />
         </div>
-        <p className="border-b border-gray-500 py-6 text-xs text-gray-400">
+        <p className="border-darkgray text-darkgray border-b py-6 text-xs">
           NAVIGATION
         </p>
         <Link href={"/"}>
@@ -70,8 +70,8 @@ const MobileNav = () => {
           </p>
         </Link>
 
-        <div className="flex flex-col border-t border-gray-500 pt-6 md:flex-1">
-          <p className="mb-4 text-xs text-gray-400">SOCIALS</p>
+        <div className="border-darkgray flex flex-col border-t pt-6 md:flex-1">
+          <p className="text-darkgray mb-4 text-xs">SOCIALS</p>
           <div className="flex items-center">
             <p className="mr-4 font-bold text-white">Github</p>
             <p className="font-bold text-white">LinkedIn</p>

@@ -7,7 +7,7 @@ const PreviewList = () => {
   return (
     <>
       {filteredData.map((project) => (
-        <div key={project.id} className="w-full py-12 md:border-t-2">
+        <div key={project.id} className="w-full py-12 md:border-t">
           <div
             style={{ backgroundColor: project.bgColor }}
             className="mb-4 flex h-[360px] items-center justify-center bg-slate-200 md:hidden"
@@ -25,14 +25,14 @@ const PreviewList = () => {
           </div>
 
           <div className="group m-auto flex w-full cursor-pointer flex-col items-center justify-between pt-4 md:w-[82%] md:flex-row">
-            <p className="w-full border-b-2 pb-2 text-3xl group-hover:text-gray-400 md:border-b-0 md:text-5xl">
+            <p className="w-full border-b pb-4 text-3xl group-hover:text-gray-400 md:border-b-0 md:text-5xl">
               {project.name}
             </p>
             <div className="flex w-full items-center justify-between pt-4 md:justify-end">
-              <p className="group-hover:text-gray-400">
+              <p className="group-hover:text-gray-400 md:text-lg">
                 {project.classification}
               </p>
-              <p className="md:hidden">{project.year}</p>
+              <p className="md:hidden md:text-lg">{project.year}</p>
             </div>
           </div>
         </div>
