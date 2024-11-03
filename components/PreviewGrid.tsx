@@ -42,7 +42,7 @@ const PreviewGrid = () => {
               </div>
 
               <div className="group m-auto flex w-full cursor-pointer flex-col items-center justify-between pt-4 md:pt-12">
-                <p className="w-full border-b-2 pb-2 text-3xl group-hover:text-gray-400 md:pb-6 md:text-3xl">
+                <p className="w-full border-b pb-2 text-3xl group-hover:text-gray-400 md:pb-6 md:text-3xl">
                   {project.name}
                 </p>
                 <div className="flex w-full items-center justify-between pt-4 md:pt-6">
