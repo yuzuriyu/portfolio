@@ -21,7 +21,7 @@ const Contact = () => {
                 />
               </div>
               <p className="ml-4 text-5xl text-white md:ml-0 md:text-8xl">
-                Let's start a
+                Let&apos;s start a
               </p>
             </div>
           </div>

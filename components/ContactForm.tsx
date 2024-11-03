@@ -8,7 +8,7 @@ const ContactForm = () => {
           <p className="mr-4 mt-2 text-xs text-gray-400">01</p>
           <div className="w-10/12">
             <p className="mb-2 text-lg text-white md:text-2xl">
-              What's your name?
+              What&apos;s your name?
             </p>
             <input
               className="w-full border-none bg-transparent text-lg text-darkgray placeholder:text-darkgray focus:outline-none md:text-2xl"
@@ -22,7 +22,7 @@ const ContactForm = () => {
           <p className="mr-4 mt-2 text-xs text-gray-400">02</p>
           <div className="w-10/12">
             <p className="mb-2 text-lg text-white md:text-2xl">
-              What's your email?
+              What&apos;s your email?
             </p>
             <input
               className="w-full border-none bg-transparent text-lg text-darkgray placeholder:text-darkgray focus:outline-none md:text-2xl"
@@ -36,7 +36,7 @@ const ContactForm = () => {
           <p className="mr-4 mt-2 text-xs text-gray-400">03</p>
           <div className="w-10/12">
             <p className="mb-2 text-lg text-white md:text-2xl">
-              What's the name of your organization?
+              What&apos;s the name of your organization?
             </p>
             <input
               className="w-full border-none bg-transparent text-lg text-darkgray placeholder:text-darkgray focus:outline-none md:text-2xl"
