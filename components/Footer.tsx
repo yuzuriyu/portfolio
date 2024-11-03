@@ -17,7 +17,9 @@ const Footer = () => {
               className="h-full w-full object-cover"
             />
           </div>
-          <p className="ml-4 text-5xl text-white md:text-8xl">Let's work</p>
+          <p className="ml-4 text-5xl text-white md:text-8xl">
+            Let&apos;s work
+          </p>
         </div>
         <ContactBtn />
       </div>
