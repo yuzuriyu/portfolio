@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import AboutMeBtn from "./AboutMeBtn";
 const TechStack = () => {
   return (
@@ -31,11 +30,16 @@ const TechStack = () => {
             />
           </div>
           <div>
-            <Image src={"/icons/github.svg"} height={40} width={40} alt="" />
-          </div>{" "}
+            <Image
+              src={"/icons/visual-studio-code.svg"}
+              height={40}
+              width={40}
+              alt=""
+            />
+          </div>
           <div>
             <Image
-              src={"/icons/postman.svg"}
+              src={"/icons/git.svg"}
               height={40}
               width={40}
               alt=""
@@ -44,7 +48,7 @@ const TechStack = () => {
           </div>
           <div>
             <Image
-              src={"/icons/visual-studio-code.svg"}
+              src={"/icons/postman.svg"}
               height={40}
               width={40}
               alt=""
@@ -68,10 +72,10 @@ const TechStack = () => {
               width={40}
               alt=""
             />
-          </div>{" "}
+          </div>
           <div>
             <Image src={"/icons/react.svg"} height={40} width={40} alt="" />
-          </div>{" "}
+          </div>
           <div>
             <Image src={"/icons/nodejs.svg"} height={40} width={40} alt="" />
           </div>
