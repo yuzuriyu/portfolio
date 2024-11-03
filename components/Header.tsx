@@ -83,7 +83,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* Conditionally render the SVG with a smoother out effect */}
       {!isMobileNavOpen && (
         <div
           className={`fixed right-4 top-4 z-20 flex h-[64px] w-[64px] cursor-pointer justify-center rounded-full border border-darkgray bg-gray-custom align-middle transition-all duration-500 ease-in-out md:top-8 md:h-[86px] md:w-[86px] ${

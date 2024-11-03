@@ -87,7 +87,6 @@ const HeaderDark = () => {
           </div>
         </div>
       </div>
-      {/* Conditionally render the SVG with a smoother out effect */}
       {!isMobileNavOpen && (
         <div
           className={`fixed right-4 top-8 z-20 hidden h-[86px] w-[86px] cursor-pointer justify-center rounded-full border border-darkgray bg-gray-custom align-middle transition-all duration-500 ease-in-out lg:flex ${

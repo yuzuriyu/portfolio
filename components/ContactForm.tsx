@@ -41,7 +41,7 @@ const ContactForm = () => {
             <input
               className="w-full border-none bg-transparent text-lg text-darkgray placeholder:text-darkgray focus:outline-none md:text-2xl"
               placeholder="Kaiba Corp"
-            />{" "}
+            />
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <div className="bg-burntSienna hover:bg-darkerBurntSienna absolute -bottom-20 right-8 flex h-[144px] w-[144px] cursor-pointer items-center justify-center rounded-full md:right-16 lg:h-[180px] lg:w-[180px]">
+      <div className="absolute -bottom-20 right-8 flex h-[144px] w-[144px] cursor-pointer items-center justify-center rounded-full bg-burntSienna hover:bg-darkerBurntSienna md:right-16 lg:h-[180px] lg:w-[180px]">
         <p className="font-bold text-white">Send it!</p>
       </div>
     </div>
