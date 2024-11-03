@@ -1,8 +1,9 @@
 "use client";
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MobileNav from "./MobileNav";
 import { PageContext } from "@/context/PageContext";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const context = useContext(PageContext);
@@ -12,6 +13,21 @@ const Header = () => {
 
   const { isMobileNavOpen, toggleMobileNav, setActivePage, activePage } =
     context;
+
+  const [isHeaderInView, setIsHeaderInView] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsHeaderInView(window.scrollY < 96); // Adjust this based on the height of your header
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       {isMobileNavOpen && <MobileNav />}
@@ -19,22 +35,14 @@ const Header = () => {
         <Link
           href={"/"}
           className="text-lg text-white"
-          onClick={() => setActivePage("")}
+          onClick={() => setActivePage("home")}
         >
           © Code by Cole
         </Link>
         <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="white"
-            className="block md:hidden"
-            onClick={toggleMobileNav}
-          >
-            <path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path>
-          </svg>
+          <p className="text-lg text-white md:hidden" onClick={toggleMobileNav}>
+            Menu
+          </p>
           <div className="hidden items-center md:flex">
             <Link
               href={"/work"}
@@ -45,7 +53,7 @@ const Header = () => {
               <div
                 className={`${
                   activePage === "work" ? "w-1/4" : "w-0 group-hover:w-full"
-                } absolute bottom-0 left-0 border-b-2 border-white transition-all duration-300 ease-in-out`}
+                } absolute bottom-0 left-0 border-b border-white transition-all duration-300 ease-in-out`}
               ></div>
             </Link>
             <Link
@@ -57,7 +65,7 @@ const Header = () => {
               <div
                 className={`${
                   activePage === "about" ? "w-1/4" : "w-0 group-hover:w-full"
-                } absolute bottom-0 left-0 border-b-2 border-white transition-all duration-300 ease-in-out`}
+                } absolute bottom-0 left-0 border-b border-white transition-all duration-300 ease-in-out`}
               ></div>
             </Link>
             <Link
@@ -69,12 +77,29 @@ const Header = () => {
               <div
                 className={`${
                   activePage === "contact" ? "w-1/4" : "w-0 group-hover:w-full"
-                } absolute bottom-0 left-0 border-b-2 border-white transition-all duration-300 ease-in-out`}
+                } absolute bottom-0 left-0 border-b border-white transition-all duration-300 ease-in-out`}
               ></div>
             </Link>
           </div>
         </div>
       </div>
+      {/* Conditionally render the SVG with a smoother out effect */}
+      {!isMobileNavOpen && (
+        <div
+          className={`fixed right-4 top-4 z-20 flex h-[64px] w-[64px] cursor-pointer justify-center rounded-full border border-darkgray bg-gray-custom align-middle transition-all duration-500 ease-in-out md:top-8 md:h-[86px] md:w-[86px] ${
+            isHeaderInView ? "scale-0" : "scale-100"
+          } }`}
+          onClick={toggleMobileNav}
+        >
+          <Image
+            src={"/icons/menu--two-lines.svg"}
+            alt=""
+            height={30}
+            width={30}
+            className={`transform transition-transform duration-500 ease-in-out`}
+          />
+        </div>
+      )}
     </>
   );
 };

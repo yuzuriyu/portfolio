@@ -4,6 +4,7 @@ import HeroBanner from "@/components/HeroBanner";
 import Introductory from "@/components/Introductory";
 import PreviewProjects from "@/components/PreviewProjects";
 import Footer from "@/components/Footer";
+import TechStack from "@/components/TechStack";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Header />
       <HeroBanner />
       <Introductory />
+      <TechStack />
       <PreviewProjects />
       <Footer />
     </div>

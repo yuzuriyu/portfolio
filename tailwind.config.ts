@@ -28,6 +28,9 @@ const config: Config = {
           custom: "#1C1D20", // Add custom gray color
         },
         darkgray: "#545557", // Add custom matte black color
+
+        burntSienna: "#E05A47",
+        darkerBurntSienna: "#C54A3D",
       },
     },
   },

@@ -7,6 +7,7 @@ export const projectData = [
     classification: "E-commerce",
     technologies: ["react", "tailwindcss", "firebase"],
     bgColor: "#E8E8E8",
+    url: "https://nendonest.web.app/",
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const projectData = [
     classification: "Personal Training",
     technologies: ["react", "tailwindcss"],
     bgColor: "#FCF9ED",
+    url: "https://ignitefitter.netlify.app/",
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const projectData = [
     classification: "Dining Service",
     technologies: ["react", "tailwindcss", "nodejs", "express"],
     bgColor: "#EBDFCC",
+    url: "https://zerocuisine.netlify.app/",
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const projectData = [
     classification: "Energy Monitoring",
     technologies: ["nextjs", "tailwindcss", "typescript"],
     bgColor: "#E8E8E8",
+    url: "https://next-structure-chi.vercel.app/",
   },
 
   {
@@ -44,6 +48,7 @@ export const projectData = [
     classification: "Digital Encyclopedia",
     technologies: ["nextjs", "tailwindcss", "typescript"],
     bgColor: "#C0CCC2",
+    url: "https://pokedex-national-two.vercel.app/",
   },
   {
     id: 6,
@@ -53,5 +58,6 @@ export const projectData = [
     classification: "Adventure Planning",
     technologies: ["react", "tailwindcss"],
     bgColor: "#A9A8AD",
+    url: "https://sussy-travel.netlify.app/",
   },
 ];

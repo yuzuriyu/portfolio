@@ -20,7 +20,7 @@ interface PageContextProviderProps {
 const PageContextProvider: React.FC<PageContextProviderProps> = ({
   children,
 }) => {
-  const [activePage, setActivePage] = useState<string>("Home");
+  const [activePage, setActivePage] = useState<string>("home");
   const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
 
   const handlePageNavigation = (currentPage: string) => {
