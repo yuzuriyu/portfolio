@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
-
 const Contact = () => {
   return (
     <div className="w-full bg-gray-custom pt-40">
