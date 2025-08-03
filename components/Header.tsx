@@ -34,50 +34,50 @@ const Header = () => {
       <div className="absolute left-1/2 top-0 z-10 flex h-24 w-11/12 -translate-x-1/2 items-center justify-between">
         <Link
           href={"/"}
-          className="text-lg text-white"
+          className="text-lg text-darkgray"
           onClick={() => setActivePage("home")}
         >
           © Code by Cole
         </Link>
         <div>
-          <p className="text-lg text-white md:hidden" onClick={toggleMobileNav}>
+          <p className="text-lg text-darkgray md:hidden" onClick={toggleMobileNav}>
             Menu
           </p>
           <div className="hidden items-center md:flex">
             <Link
               href={"/work"}
-              className="group relative mr-12 cursor-pointer text-lg text-white"
+              className="group relative mr-12 cursor-pointer text-lg text-darkgray"
               onClick={() => setActivePage("work")}
             >
               Work
               <div
                 className={`${
                   activePage === "work" ? "w-1/4" : "w-0 group-hover:w-full"
-                } absolute bottom-0 left-0 border-b border-white transition-all duration-300 ease-in-out`}
+                } absolute bottom-0 left-0 border-b border-darkgray transition-all duration-300 ease-in-out`}
               ></div>
             </Link>
             <Link
               href={"/about"}
-              className="group relative mr-12 cursor-pointer text-lg text-white"
+              className="group relative mr-12 cursor-pointer text-lg text-darkgray"
               onClick={() => setActivePage("about")}
             >
               About
               <div
                 className={`${
                   activePage === "about" ? "w-1/4" : "w-0 group-hover:w-full"
-                } absolute bottom-0 left-0 border-b border-white transition-all duration-300 ease-in-out`}
+                } absolute bottom-0 left-0 border-b border-darkgray transition-all duration-300 ease-in-out`}
               ></div>
             </Link>
             <Link
               href={"/contact"}
-              className="group relative cursor-pointer text-lg text-white"
+              className="group relative cursor-pointer text-lg text-darkgray"
               onClick={() => setActivePage("contact")}
             >
               Contact
               <div
                 className={`${
                   activePage === "contact" ? "w-1/4" : "w-0 group-hover:w-full"
-                } absolute bottom-0 left-0 border-b border-white transition-all duration-300 ease-in-out`}
+                } absolute bottom-0 left-0 border-b border-darkgray transition-all duration-300 ease-in-out`}
               ></div>
             </Link>
           </div>

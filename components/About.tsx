@@ -21,7 +21,7 @@ const About = () => {
         </div>
         <div className="md:w-2/3">
           <Image
-            src={"/images/portrait.jpg"}
+            src={"/images/casual.jpg"}
             alt=""
             width={0}
             height={0}
@@ -71,7 +71,7 @@ const About = () => {
       <div className="m-auto flex w-11/12 flex-col gap-2 pb-40 md:w-8/12 md:flex-row md:gap-20">
         <div className="md:w-1/2">
           <Image
-            src={"/images/portrait-2.jpg"}
+            src={"/images/portrait.jpg"}
             alt=""
             width={0}
             sizes="100vw"

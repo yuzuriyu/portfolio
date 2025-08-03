@@ -11,7 +11,7 @@ const Contact = () => {
             <div className="flex items-center">
               <div className="h-12 w-12 overflow-hidden rounded-full md:hidden md:h-24 md:w-24">
                 <Image
-                  src="/images/Jisoo.jpg"
+                  src="/images/profile--white.png"
                   alt="Jisoo"
                   width={0}
                   height={0}
@@ -31,7 +31,7 @@ const Contact = () => {
         <div className="md:w-1/4">
           <div className="hidden h-12 w-12 md:ml-8 md:block md:h-28 md:w-28">
             <Image
-              src="/images/Jisoo.jpg"
+              src="/images/profile--white.png"
               alt="Jisoo"
               width={0}
               height={0}

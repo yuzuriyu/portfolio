@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex items-center">
           <div className="h-12 w-12 overflow-hidden rounded-full md:h-24 md:w-24">
             <Image
-              src="/images/Jisoo.jpg"
+              src="/images/profile--white.png"
               alt="Jisoo"
               width={0}
               height={0}

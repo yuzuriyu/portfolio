@@ -5,7 +5,7 @@ const HeroBanner = () => {
   return (
     <div className="relative">
       <Image
-        src={"/images/Jisoo.jpg"}
+        src={"/images/photo.png"}
         alt="Carey Cole Garcia Banner"
         width={0}
         height={0}
